@@ -757,7 +757,7 @@ export default class DocBuilder {
 
     if (doc.kind === 'external') {
       text = doc.name;
-      return `<span><a href="${doc.externalLink}">${text}</a></span>`;
+      return `<span><a href="${doc.externalLink}" target="_blank">${text}</a></span>`;
     } else {
       text = escape(text || doc.name);
       const url = this._getURL(doc, inner);
